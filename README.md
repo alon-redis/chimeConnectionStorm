@@ -10,3 +10,9 @@ gem list --local | grep redis
 > hello4.rb; pico hello4.rb
 ruby hello4.rb redis:port
 ```
+OS configuration:
+```
+sysctl -w net.ipv4.tcp_fin_timeout=10
+sysctl -w net.ipv4.tcp_tw_reuse=1
+ulimit -n 1000000
+```
